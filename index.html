@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>college_finder</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table tr td{
+            text-align: center;
+            /* border: 2px solid black; */
+        }
+    </style>
+</head>
+<body>
+    <table class="detail" id="table1">
+        <tr>
+            <td>
+                <label for="name">Enter your name: </label>
+            </td>
+            <td>
+                <input type="text" name="name" id="nam">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="rank">Rank:</label>
+            </td>
+            <td>
+                <input type="text" name="rank" id="rnk"><br>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="submit"
+                   onclick="getList()"
+                >
+            </td>  
+        </tr>
+    </table>
+    <div style="clear:both"></div>
+        <div id="result">
+        
+        </div>
+    <!-- <div class="detail">
+        <label for="name">Enter your name: </label>
+        <input type="text" name="name" id="nam"><br>
+        <label for="rank">Rank:</label>
+        <input type="text" name="rank" id="rnk"><br>
+        <input type="submit" value="submit">
+    </div> -->
+    <script src="script.js" defer></script>
+</body>
+</html>
