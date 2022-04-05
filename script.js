@@ -72,11 +72,13 @@ const collegeList = [
 ]
 
 const rank = document.getElementById('rnk');
+const myname = document.getElementById('nam');
 const result = document.getElementById('result');
+const heading = document.getElementById('page-header');
 
 function getList() {
 
-    if(rank.value) {
+    if(rank.value && myname.value) {
         const list = collegeList.filter((e) => e.elirank > rank.value);
         const listClg = list.map((item) => {
           return `
@@ -96,11 +98,13 @@ function getList() {
        </table>
         `;
         });
-
+        
+        heading.innerHTML= myname.value + " this colleges for you";
         result.innerHTML = listClg.join("\n");
     }
     else {
-        alert('please enter your rank!!!!');
+
+        alert('fill your detail completely!!!!');
     }
     // body.classList.remove('detail');
 }
